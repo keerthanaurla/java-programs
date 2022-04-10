@@ -1,0 +1,134 @@
+//program using arrays
+/*import java.io.*;
+class Arrays1
+{
+ public static void main(String args[])throws Exception
+ {
+  int x[],n,i;
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+  System.out.println("Enter size of an array:");
+  n=Integer.parseInt(br.readLine());
+  x=new int[n];
+  System.out.println("Enter the "+n+" elements");
+  for(i=0;i<n;i++)
+     x[i]=Integer.parseInt(br.readLine());
+  System.out.println("Elements in the array are:");
+  for(int ele:x)
+    System.out.println(ele);
+ }
+}*/
+
+//program to find max & min elements in a given array
+/*import java.io.*;
+class Arrays1
+{
+ public static void main(String args[])throws Exception
+ {
+  int x[],n,i,max=0,min=0;
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+  System.out.println("Enter size of an array:");
+  n=Integer.parseInt(br.readLine());
+  x=new int[n];
+  System.out.println("Enter the "+n+" elements");
+   for(i=0;i<n;i++)
+     x[i]=Integer.parseInt(br.readLine());
+  System.out.println("Elements in the array are:");
+  for(int ele:x)
+    if(max<x[i])
+      max=x[i];
+      System.out.println("maximum element in an array is:"+ max);
+  for(int ele:x)
+    if(min>x[i])
+      min=x[i];
+*/
+
+//program to find even and odd elements in a given array
+/*import java.io.*;
+class Arrays1
+{
+ public static void main(String args[])throws Exception
+ {
+  int x[],E[],O[],n,i,j=0,k=0;
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+  System.out.println("Enter size of an array:");
+  n=Integer.parseInt(br.readLine());
+  x=new int[n];
+  E=new int[n];
+  O=new int[n];
+  System.out.println("Enter the "+n+" elements");
+  for(i=0;i<n;i++)
+     x[i]=Integer.parseInt(br.readLine());
+  for(int ele:x)
+  {
+   if(ele%2==0)
+     E[j++]=ele;
+   else
+     O[k++]=ele;
+  }
+  for(i=0;i<j;i++)
+   System.out.print(E[i]+" ");
+  System.out.println();
+  for(i=0;i<k;i++)
+   System.out.print(O[i]+" ");
+ }
+}*/
+
+//program to find sum and average
+/*import java.io.*;
+class Arrays1
+{
+ public static void main(String args[])throws Exception
+ {
+  int x[],n,i,sum=0,avg;
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter size of an array:");
+  n=Integer.parseInt(br.readLine());
+  x=new int[n];
+  System.out.println("Enter the "+n+" elements");
+  for(i=0;i<n;i++)
+     x[i]=Integer.parseInt(br.readLine());
+  System.out.println("Elements in the array are:");
+  for(int ele:x)
+    System.out.println(ele);
+  for(i=0;i<n;i++)
+     sum+=x[i];
+    System.out.println("Sum of elements in array:"+sum);
+  avg=sum/n;
+  System.out.println("average of elements in an array:"+avg);
+ }
+}*/
+
+//program to find the unique salary of an employee 
+/*import java.io.*;
+class Arrays1
+{
+ public static void main(String args[])throws Exception
+ {
+  int salary[],n,i,j,count=0;
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Enter no.of.employees:");
+  n=Integer.parseInt(br.readLine());
+  salary=new int[n];
+  System.out.println("Enter the "+n+" employees salaries");
+  for(i=0;i<n;i++)
+     salary[i]=Integer.parseInt(br.readLine());
+  for(i=0;i<n;i++)
+  {
+   if(salary[i]!=-1)
+   {
+    count=0;
+   for(j=i+1;j<n;j++)
+   {
+    if(salary[i]==salary[j])
+    {
+     count++;
+     salary[j]=-1;
+    }
+   }
+  }
+ 
+  if(count==0)
+   System.out.println(salary[i]);
+}
+ }
+}*/
