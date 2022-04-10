@@ -1,0 +1,133 @@
+//TYPECASTING AND ITS TYPES
+//WIDENING (implicit) lower-->higher
+class Typecasting
+{
+public static void main(String args[])
+{
+int myint=9;
+double mydouble=myint;
+System.out.println(myint);
+System.out.println(mydouble);
+}
+}  //output:9,9.0
+
+//NARROWING (explicit) higher-->lower
+class Typecasting
+{
+public static void main(String args[])
+{
+double mydouble=9.78d;
+int myint=(int)mydouble;
+System.out.println(mydouble);
+System.out.println(myint);
+}
+}   //output:9.78,9
+//program to check given letter is vowel or not
+/*import java.io.*;
+class Typecasting
+{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+char ch;
+ch=(char)br.read();
+System.out.println("Enter a character:");
+switch(ch)
+{
+case 'A':
+case 'E':
+case 'I':
+case 'O':
+case 'U':
+    System.out.println("Vowel");
+    break;
+default:
+    System.out.println("Constant");
+}
+}
+}*/
+
+//program to check vibgyor colours
+/*import java.io.*;
+class Typecasting
+{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+char ch;
+System.out.println("Enter a starting letter:");
+ch=(char)br.read();//syntax to read char 
+switch(ch){
+case 'V':
+case 'v':
+        System.out.println("Violet");
+        break;
+case 'I':
+case 'i':
+        System.out.println("Indigo");
+        break;
+case 'B':
+case 'b':
+        System.out.println("Blue");
+        break;
+case 'G':
+case 'g':
+        System.out.println("Green");
+        break;
+case 'Y':
+case 'y':
+        System.out.println("Yellow");
+        break;
+case 'O':
+case 'o':
+        System.out.println("Orange");
+        break;
+case 'R':
+case 'r':
+        System.out.println("Red");
+        break;
+default:
+       System.out.println("Invalid colour");
+       break;
+}
+}
+}*/
+
+//program to display season by taking input
+/*import java.io.*;
+class Typecasting
+{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n;
+System.out.println("Enter a season number:");
+n=Integer.parseInt(br.readLine());
+switch(n){
+case 3:
+case 4:
+case 5:
+      System.out.println("Summer");
+      break;
+case 6:
+case 7:
+case 8:
+case 9:
+      System.out.println("Rainy");
+      break;
+case 10:
+case 11:
+case 12:
+case 1:
+case 2:
+      System.out.println("Winter");
+      break;
+default:
+      System.out.println("INVALID NUMBER");
+      break;
+}
+}
+}*/
