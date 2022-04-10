@@ -1,0 +1,52 @@
+//program to print prime numbers b/w 1-100
+/*import java.io.*;
+class Programs
+{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n=2,i,count;
+while(n<=100)
+{
+count=0;
+for(i=1;i<=n;i++){
+if(n%i==0)
+count++;
+}
+if(count==2)
+System.out.print(n+" ");
+n++;
+}
+}
+}*/
+
+//program to find disarium number
+/*import java.io.*;
+class Programs
+{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n,digit,sum=0,rem,temp;
+n=Integer.parseInt(br.readLine());
+temp=n;
+digit=(int)Math.log10(n)+1;
+while(n>0)
+{
+ rem=n%10;
+ sum=sum+(int)Math.pow(rem,digit);
+ n=n/10;
+ digit--;
+}
+if(sum==temp)
+{
+ System.out.println(temp+" is Disarium number");
+}
+else
+{
+ System.out.println(temp+" is not Disarium number");
+}
+}
+}*/ 
