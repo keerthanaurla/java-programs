@@ -1,0 +1,178 @@
+//program on different types of constructors 
+/*import java.io.*;
+class ObjectOriented
+{
+ int x;
+ public ObjectOriented()  //default constructor
+ {
+  System.out.println("Default Constructor");
+  x=10;
+ }
+ public ObjectOriented(int y) //parameterized constructor
+ {
+  System.out.println("Parameterized Constructor");
+  x=y;
+ }
+ public void show()
+ {
+  System.out.println(x);
+ }
+ public static void main(String args[])
+ {
+  ObjectOriented c1=new ObjectOriented(); //it calls automatically default constructor
+  ObjectOriented c2=new ObjectOriented(200); //it calls parameterized constructor
+  c1.show();
+  c2.show(); 
+ }
+}*/
+
+//usage of copy constructor
+/*import java.io.*;
+class ObjectOriented
+{
+ int x;
+ public ObjectOriented()  //default constructor
+ {
+  System.out.println("Default Constructor");
+  x=10;
+ }
+ public ObjectOriented(int y) //parameterized constructor
+ {
+  System.out.println("Parameterized Constructor");
+  x=y;
+ }
+ public ObjectOriented(ObjectOriented c)
+ {
+  x=c.x;
+ }
+ public void show()
+ {
+  System.out.println(x);
+ }
+ public static void main(String args[])
+ {
+  ObjectOriented c1=new ObjectOriented(); //it calls automatically default constructor
+  ObjectOriented c2=new ObjectOriented(200); //it calls parameterized constructor
+  ObjectOriented c3=new ObjectOriented(c1); //it is copy constructor
+  c1.show();
+  c2.show();
+  c3.show();
+ }
+}*/ 
+
+//VOLUME OF A BOX
+/*import java.io.*;
+class ObjectOriented
+{
+ int l,b,h;
+ public ObjectOriented()
+ {
+  System.out.println("Default Constructor");
+  l=b=h=0;
+ }
+ public ObjectOriented(int n)
+ {
+  System.out.println("Parameterized Constructor with only one parameter");
+  l=b=h=n;
+ }
+ public ObjectOriented(int x,int y,int z)
+ {
+  System.out.println("Parameterized Constructor with 3 parameters");
+  l=x;
+  b=y;
+  h=z;
+ }
+ public int Volume()
+ {
+  return l*b*h;
+ }
+ public static void main(String[] args)
+ {
+  ObjectOriented c1=new ObjectOriented();
+  ObjectOriented c2=new ObjectOriented(6); 
+  ObjectOriented c3=new ObjectOriented(2,3,4);
+  System.out.println(c1.Volume());
+  System.out.println(c2.Volume());
+  System.out.println(c3.Volume());
+ }
+}*/
+
+/*this object
+this object is called generic object.it is used to 
+1)Store the address of currently executing object
+2)To differentiate local and global variables both are having same name*/
+/*import java.io.*;
+class ObjectOriented
+{
+ int x;
+ public ObjectOriented(int y)
+ {
+  this.x=y;
+ }
+ public void show()
+ {
+  System.out.println(this.x);
+ }
+ public static void main(String[] args)
+ {
+  ObjectOriented c1=new ObjectOriented(10); 
+  c1.show();
+ }
+}*/
+
+//program to differentiate variables using 'this'
+/*import java.io.*;
+class ObjectOriented
+{
+ int x; //global variable
+ public ObjectOriented(int x) //local variable
+ {
+  x=x;       //gives output as 0
+  //this.x=x; //gives output as 10
+ }
+ public void show()
+ {
+  System.out.println(this.x);
+ }
+ public static void main(String[] args)
+ {
+  ObjectOriented c1=new ObjectOriented(10); 
+  c1.show();
+ }
+}*/
+
+//program to perform addition of two complex numbers
+/*import java.io.*;
+class ObjectOriented
+{
+ int real,imag;
+ 
+ public ObjectOriented()
+ {}
+ public ObjectOriented(int x,int y)
+ {
+  real=x;
+  imag=y;
+ }
+ public void show()
+ {
+  System.out.println(real+"+i"+imag);
+ }
+ public void add(ObjectOriented c1,ObjectOriented c2)
+ {
+   this.real=c1.real+c2.real;
+   this.imag=c1.imag+c2.imag;
+ }
+ public static void main(String args[])
+ {
+  ObjectOriented c1=new ObjectOriented(2,3);
+  ObjectOriented c2=new ObjectOriented(4,5);
+  ObjectOriented c3=new ObjectOriented();
+  c3.add(c1,c2);
+
+  c1.show();
+  c2.show();
+  System.out.println("The sum of two complex numbers is:");
+  c3.show();
+ }
+}*/
