@@ -1,0 +1,78 @@
+/*class Methods
+{ 
+ int x=10,y=20;
+ public static void show()
+ {
+  System.out.println("Good Evening");
+ }
+ public void display()
+ {
+  System.out.println("Good Morning");
+ }
+ public static void main(String args[])
+ {
+   Methods obj=new Methods();//syntax for accessing non-static methods in static method or a class is (classname obj_name=new classname())
+   obj.display();
+   show();
+   System.out.println("Welcome");
+   System.out.println(obj.x);
+   System.out.println(obj.y);
+ }
+}*/
+
+/*class Methods
+{ 
+ 
+ public static void main(String args[])
+ {
+   String s1=new String("Aditya");//immutable
+   s1=s1.concat("Engineering");
+   System.out.println(s1);
+   StringBuffer s2=new StringBuffer("Aditya");//mutable
+   s2.append("Engineering");
+   System.out.println(s2);
+ }
+}*/
+
+/*IMPORTANT POSSIBLE CONSTRUCTORS OF STRING OBJECT*/
+
+/*import java.io.*;
+class Methods
+{
+ public static void main(String args[])throws Exception
+ {
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+  String input;
+  int sum=0;
+  input=br.readLine();
+  String num[]=input.split(" ");
+  for(int i=0;i<num.length;i++)
+  { 
+   sum=sum+Integer.parseInt(num[i]);
+   System.out.println(num[i]);
+  }
+   System.out.println(sum);
+ }
+}*/
+
+//program which takes a string and display no of vowels in it
+/*import java.io.*;
+class Methods
+{
+ public static void main(String args[])throws Exception
+ {
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+  String input;
+  int v=0,c=0;
+  input=br.readLine();
+  char x[]=input.toCharArray();
+  for(int i=0;i<x.length;i++)
+  {
+   if(x[i]=='a' || x[i]=='e' || x[i]=='i' || x[i]=='o' || x[i]=='u')
+     v++;
+   else
+     c++;
+  }
+  System.out.println(v+" "+c);
+ }
+}*/
