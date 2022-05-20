@@ -1,0 +1,159 @@
+//eligible for marriage
+package myproject;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+ class MinorException extends Exception {
+	public MinorException(String msg)
+	{
+		super(msg);
+	}
+}
+class MajorException extends Exception
+{
+	public MajorException(String msg)
+	{
+		super(msg);
+	}
+}
+class SeniorCitizenException extends RuntimeException
+{ 
+	public SeniorCitizenException(String msg)
+	{
+		super(msg);
+	}
+}
+
+
+public class CustomizedException {
+	public static void main(String args[])
+	{
+	int age=0;
+	Scanner sc=new Scanner(System.in);
+	try
+	{
+		age=sc.nextInt();
+		if(age<18)
+			throw new MinorException("You are not eligible for marriage");
+		else if(age>=18 && age<40)
+			throw new MajorException("You are not eligible for marriage");
+		else
+			throw new SeniorCitizenException("You are too late");
+	}
+	catch (MinorException me)
+	{
+		System.out.println(me);
+	}
+	catch(MajorException me)
+	{
+		System.out.println(me);
+	}
+	catch(SeniorCitizenException me)
+	{
+		System.out.println(me);
+	}
+	catch(InputMismatchException me)
+	{
+		System.out.println("Input format is not correct");
+	}
+	catch(Exception e)
+	{
+		System.out.println(e);
+	}
+   
+	}
+
+}
+2.//checking bank balance
+package myproject;
+import java.util.*;
+import java.util.InputMismatchException;
+class InsufficientBalException extends Exception
+{
+	public InsufficientBalException(String msg)
+	{
+		super(msg);
+	}
+}
+
+
+public class Accepted {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int curb=0,witha=0;
+		Scanner sc=new Scanner(System.in );
+		try
+		{
+			curb=sc.nextInt();
+			witha=sc.nextInt();
+			if((curb-witha)<500)
+				throw new InsufficientBalException("Minimum of 500 balance should be required");
+			
+		}
+		catch(InputMismatchException me)
+		{
+			System.out.println("Input should be integer");
+		}
+		catch(InsufficientBalException ib)
+		{
+			System.out.println(ib);
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		System.out.println("Balance="+(curb-witha));
+
+	}
+
+}
+//averrage of three subjects
+package myproject;
+class NegativemarksException extends Exception
+{
+	public NegativemarksException(String msg)
+	{
+		super(msg);
+	}
+}
+
+public class Average {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name=null;
+		int m1=0,m2=0,m3=0;
+		try
+		{
+			name=args[0];
+			m1=Integer.parseInt(args[1]);
+			m2=Integer.parseInt(args[2]);
+			m3=Integer.parseInt(args[3]);
+			if(m1<0 || m2<0 || m3<0)
+				throw new NegativemarksException("Marks should be greater than zero");
+		}
+		catch(ArrayIndexOutOfBoundsException aoe)
+		{
+			System.out.println("Minimum of 4 arguments you need to pass");
+		}
+		catch(NumberFormatException ne)
+		{
+			System.out.println("Marks should be integer");
+		}
+		catch(NegativemarksException nve)
+		{
+			System.out.println("Maks should be greater than zero");
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
+		System.out.println("Name="+name);
+		System.out.println("Average is="+(m1+m2+m3)/3);
+
+	}
+
+}
